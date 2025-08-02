@@ -1,0 +1,20 @@
+{
+  "name": "saucedemo-bdd-automation",
+  "version": "1.0.0",
+  "description": "BDD automation testing for SauceDemo e-commerce site using Cucumber and Playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "set NODE_TLS_REJECT_UNAUTHORIZED=0 && cucumber-js features --require step-definitions",
+    "test:smoke": "set NODE_TLS_REJECT_UNAUTHORIZED=0 && cucumber-js features --require step-definitions --tags @smoke",
+    "test:critical": "set NODE_TLS_REJECT_UNAUTHORIZED=0 && cucumber-js features --require step-definitions --tags @critical",
+    "test:regression": "set NODE_TLS_REJECT_UNAUTHORIZED=0 && cucumber-js features --require step-definitions --tags @regression"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.1.0",
+    "playwright": "^1.54.1"
+  }
+}
